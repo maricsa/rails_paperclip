@@ -2,7 +2,10 @@
 <hr>
 <br>
 <% @users.each do |user| %>
-<%= link_to user.username, user_path(user.id) %>
+  <tr>
+    <td><%= image_tag user.avatar.url(:small) %></td>
+    <td><%= link_to user.username, user_path(user.id) %></td>
+  </tr>
 <br>
 <hr>
 <% end %>

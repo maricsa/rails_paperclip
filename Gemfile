@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'bcrypt-ruby', '~> 3.1.5', require: "bcrypt"
-gem "paperclip", "~> 4.2"
+gem "paperclip"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

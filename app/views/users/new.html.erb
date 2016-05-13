@@ -1,6 +1,6 @@
 <h2>Sign Up</h2>
 
-<%=form_for User.new do |f| %>
+<%=form_for User.new, html: { multipart: true } do |f| %>
 
 <%=f.label :email %>
 
@@ -17,6 +17,9 @@
 <%=f.label :username %>
 
 <%=f.text_field :username %>
+
+<%= f.label :avatar %>
+<%= f.file_field :avatar %>
 
 <%=f.submit "Sign Up" %>
 
