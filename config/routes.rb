@@ -7,14 +7,14 @@ Rails.application.routes.draw do
   get 'sessions/destroy'
 
   resources :users
-  
-  get '/' => 'home#index'
+
+  # get '/' => 'home#index'
 
   get "/log-in" => "sessions#new"
 
   post "/log-in" => "sessions#create"
 
-  get "/log-out" => "sessions#destroy", as: :log_out
+  delete "/log-out" => "sessions#destroy", as: :log_out
 
 
 
@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'home#index'
+  root 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
